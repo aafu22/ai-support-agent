@@ -64,7 +64,7 @@ export default function Landing() {
           </div>
         </section>
       </main>
-      <footer className="px-6 py-8 text-center text-sm text-stone-500">Portfolio project · Next.js, FastAPI, LangGraph, pgvector</footer>
+     
     </div>
   );
 }
