@@ -1,0 +1,25 @@
+# Local full-backend stack: Postgres+pgvector and the API.
+# Usage: docker compose up --build   (reads backend/.env for keys)
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: app
+      POSTGRES_DB: support
+    ports: ["5433:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app -d support"]
+      interval: 5s
+      retries: 10
+  backend:
+    build: ./backend
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: postgresql://app:app@db:5432/support
+    depends_on:
+      db: { condition: service_healthy }
+    ports: ["8000:8000"]
+volumes:
+  pgdata:

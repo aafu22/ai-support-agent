@@ -1,0 +1,5 @@
+[
+  {"question": "What is your refund policy?", "should_answer": true, "expect_any": ["refund"]},
+  {"question": "How long does shipping take?", "should_answer": true, "expect_any": ["day", "week"]},
+  {"question": "What is the CEO's favourite colour?", "should_answer": false, "expect_any": []}
+]
