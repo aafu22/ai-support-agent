@@ -7,6 +7,17 @@ A multi-tenant SaaS where a business uploads its own knowledge (PDF, DOCX, TXT, 
 - hands difficult conversations to a human through a ticket system.
 
 
+**Live demo:** https://ai-support-agent-mu-one.vercel.app
+
+> The backend runs on a free Render instance, so the first request after inactivity can take up to a minute. The demo uses a free-tier LLM and sample data only, so please don't enter personal information.
+
+![Demo: customer chat with sources and human handoff](docs/demo.gif)
+
+| Customer chat | Dashboard | Tickets |
+|---|---|---|
+| ![Chat](docs/screenshots/chat.png) | ![Dashboard](docs/screenshots/dashboard.png) | ![Tickets](docs/screenshots/tickets.png) |
+
+
 ---
 
 ## Table of contents
